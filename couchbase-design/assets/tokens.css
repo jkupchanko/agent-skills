@@ -1,0 +1,22 @@
+/* Scoped starter tokens; apply data-theme="dark" to the same root.
+   Font files are deliberately not bundled; load approved Centra No2/Inter resources. */
+.couchbase-ui {
+ --cb-action:#ec1218; --cb-action-hover:#7c0206; --cb-action-pressed:#560003;
+ --cb-cream:#fff0da; --cb-cream-ink:#211e19; --cb-cream-muted:#655747;
+ --cb-canvas:#fff; --cb-surface:#fff; --cb-control:#fff0da;
+ --cb-ink:#181818; --cb-muted:#595953; --cb-line:#deddd8; --cb-control-line:#aaa89f;
+ --cb-selected:#fff3ed; --cb-check:#21ea2a; --cb-check-ink:#000;
+ --cb-edit-ink:#b30910; --cb-accent:#547d91;
+ --cb-heading-font:"Centra No2",Inter,sans-serif; --cb-body-font:Inter,sans-serif;
+ --cb-radius:12px; --cb-card-radius:16px; --cb-control-height:48px;
+ --cb-content-width:1260px;
+ --cb-h1:clamp(32px,2rem + ((1vw - 3.2px)*1.481),48px);
+ --cb-h2:clamp(24px,1.5rem + ((1vw - 3.2px)*.741),32px);
+ --cb-h3:clamp(18px,1.125rem + ((1vw - 3.2px)*.556),24px);
+ color:var(--cb-ink);font-family:var(--cb-body-font);color-scheme:light;
+}
+.couchbase-ui[data-theme="dark"] {
+ --cb-canvas:#000; --cb-surface:#242424; --cb-control:#303030; --cb-selected:#3b3b3b;
+ --cb-ink:#f5f5f5; --cb-muted:#c5c5c5; --cb-line:#444; --cb-control-line:#777;
+ --cb-edit-ink:#ffaaa4; --cb-accent:#789aaa;color-scheme:dark;
+}
