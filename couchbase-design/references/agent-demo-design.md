@@ -1,6 +1,6 @@
 # Agent demo design
 
-Use for conversational demos and adjacent activity inspectors. These preferences came from the hotel concierge demo reviewed on 2026-11-08; adapt the content and functions to each product. Preserve the approved calculator patterns elsewhere.
+Use for conversational demos and adjacent activity inspectors. These preferences consolidate the hotel and Air demos. Read [demo-defaults.md](demo-defaults.md) for the current shared starting contract; adapt content and functions to each product. Preserve the approved calculator patterns elsewhere.
 
 ## One current action, optional evidence
 
@@ -21,7 +21,7 @@ Update existing activity rows in place. Rebuilding the entire panel on each even
 
 The empty state should hug its heading and short helper text, not reserve a tall timeline. Remove minimum heights, empty list margins and grid stretching where they create blank space. Use consistent 8–12px internal gaps and roughly 16–24px panel padding as starting points. Avoid stacking padding from nested wrappers. Keep bottom padding as deliberate as top padding.
 
-A compact summary can follow the chat on desktop, but disable sticky behavior when expanded content cannot fit the viewport. Avoid separate competing scrollbars. Use normal stacked flow on narrow screens. Confirm expanded details and long function names remain accessible.
+A compact summary can follow the chat on desktop, but disable sticky behavior when expanded content cannot fit the viewport. The current hotel split view has a separate Activity details card below activity; each bounded region owns its scroll. Avoid nested scrollports fighting over the same content. Use normal stacked flow on narrow screens. Confirm expanded details and long function names remain accessible.
 
 ## Seamless surfaces and outlines
 
@@ -50,12 +50,12 @@ Inspect initial empty state, running tool, completed result, open Activity detai
 
 For the Air demo, keep tool Input and Result blocks aligned to the same left edge and width. John rejected alternating chat-style offsets for this evidence view. Give each tool call a clear header and separate input/result surfaces; use neutral input, quiet blue-gray result, and restrained amber for an error. Show actual argument names and returned evidence, including failures and retries. This is an observable execution record, not model thought disclosure.
 
-Keep Decision and Draft reply distinct. Use a short rationale and readable full reply; put secondary action lists and model/token metadata behind a disclosure. Shorten authored sample copy, but do not silently truncate live decision constraints or passenger replies. Keep the approval action with the reply. Preferred/recommended options use a quiet cream tint, dark text, a neutral border, and a written recommendation label—not a solid red fill.
+Keep Decision and Draft reply distinct. Use a short rationale and readable full reply; put secondary action lists and model/token metadata behind a disclosure. Shorten authored sample copy, but do not silently truncate live decision constraints or passenger replies. Show an approval action only when the implemented workflow requires it; the accepted Air conversation applies its simulated adjustment in the conversation without adding an invented Accept offer step. Preferred/recommended options use a quiet cream tint in light mode and a subdued warm surface in dark, theme-appropriate readable text, a neutral border, and a written recommendation label—not a solid red fill.
 
-Passenger request cards separate flight identity, message, compact assessment, and routing. Prefer inline label/value pairs to tall label-over-value stacks when they remain readable. Avoid a cluster of uppercase tags such as intent, urgency, needs, and “to Claude”; use clear routing language such as “Sent to Recovery.” Card height should follow useful content, with no imposed blank space.
+Passenger request cards separate flight identity, message, compact assessment, and routing. Use short, vertically separated identity, message and result sections. The latest passenger conversation uses named incoming/outgoing message bubbles; reserve compact label/value rows for metadata. Avoid a cluster of uppercase tags such as intent, urgency, needs, and “to Claude”; use clear routing language such as “View conversation,” with a working destination. Card height should follow useful content, with no imposed blank space.
 
 ## Demo-wide consistency
 
-Audit secondary navigation as well as the main view: How it works, model information, query/workflow references, Cost, and footer. Reuse card, type, spacing and status roles. Explain the scenario actually shown; do not carry old counts, diagrams, model names, empty query blocks, or “Live” badges into a simulated run. Simulated costs are illustrative, not pricing quotes. Product architecture references must be distinguishable from connected services.
+Audit secondary navigation as well as the main view: Commands, query/workflow references, Cost, More, and footer. Where the guided tour replaced How it works, do not restore the duplicate page. Reuse card, type, spacing and status roles. Explain the scenario actually shown; do not carry old counts, diagrams, model names, empty query blocks, or “Live” badges into a simulated run. Simulated costs are illustrative, not pricing quotes. Product architecture references must be distinguishable from connected services.
 
 Preserve the main interface when adding simulated data. John rejected a new replay panel and prominent Resume / Next event buttons. Keep optional replay controls in the existing More menu unless explicitly requested otherwise; retain a concise simulation label. Do not infer permission to change real backend behavior from a simulation request.

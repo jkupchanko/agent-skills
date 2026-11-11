@@ -11,6 +11,12 @@ Treat the reported example as evidence of a reusable pattern, not permission for
 
 For Couchbase-branded work, read [couchbase-design](../couchbase-design/SKILL.md) for fonts, colors, assets and approved component treatment. Apply this skill for the repair method; do not substitute a new aesthetic or copy the brand rules into this file. The user's latest instruction takes precedence over both skills. For other products, use their existing design system instead.
 
+## Start with the known setup
+
+For the Couchbase demo family, read the paired profile's [demo defaults](../couchbase-design/references/demo-defaults.md) before choosing a repair. The existing approved UI is the baseline; do not ask the user to rediscover fonts, controls or panel behavior. Load the relevant brand reference once, then inspect current components and winning styles. Keep project-specific build commands and deployment state in the project, not this skill.
+
+Use a short internal repair map: **reported example → equivalent roles → preserved behavior → affected states**. A request to clean up a dropdown includes other disclosures of the same role and their open states; it does not make a selection menu, text-message bubble and tool-result card interchangeable.
+
 ## Establish the repair boundary
 
 Inspect the current UI and implementation before editing. Identify the reference the user approved, the specific defect, related instances and what must stay unchanged. Do not ask the user to repeat known preferences. State the intended scope briefly; do not turn routine implementation choices into an approval process.
@@ -31,6 +37,20 @@ Make the current action discoverable without moving the entire page. A compact p
 
 When a disclosure opens near the bottom, reveal its heading and some content within its own scroll container. Reset invalid stale offsets when collapsing/reopening or replacing a run; otherwise preserve useful reading position. Avoid smooth animation that competes with incoming updates. Respect reduced motion.
 
+## Apply by role, not by superficial shape
+
+| Pattern | Preserve | Verify |
+|---|---|---|
+| Conversation | Speaker identity, message order, full content, distinct incoming/outgoing surfaces | Arrival/typing, manual scroll, phone overflow, no page jump |
+| Tool evidence | Function name, Input/Result alignment, selected versus used state | Running, skipped/failed, returned evidence, disclosure changes |
+| Live frame | Approved idle size and agreed active frame, pinned current action | Start, completion, details open/closed, next request |
+| Toolbar/disclosure | Product control shape and accessible name, consistent padding | Phone/tablet breakpoint, open menu, theme, keyboard and long label |
+| Reference/Cost | Same hierarchy and truthful service/usage labels | Secondary screens, code copy feedback, table/code internal scroll |
+
+When a condensed section becomes blank, compare content, hidden state and scroll geometry; fix the cause rather than leaving a white placeholder. Collapsing details must actually hide its body and reclaim the intended space. Reopening must reveal usable content. Preserve manual scroll and disclosure state during live events.
+
+For the hotel split layout, the activity and details cards share an agreed column height when populated; details expansion redistributes that space. For paired map/activity panels, align outer edges throughout status updates. Empty states need not reserve the populated height. Treat these as explicit layout modes, not competing global min-height rules.
+
 ## Verify the pattern, not just the example
 
 Choose checks based on the affected behavior:
@@ -39,7 +59,7 @@ Choose checks based on the affected behavior:
 - Long tool names and outputs; keyboard focus and internal scroll access.
 - Narrow phone, intermediate two-column layout and desktop; relevant themes.
 
-Compare the same dimensions across states. Check for clipping and unintended page scrolling. Use targeted automated tests for state changes, with visual verification for geometry. Do not repeat unchanged checks after they pass unless new evidence warrants it.
+For the demo family, use representative phone, iPad and desktop widths from the paired profile; include short desktop height for sticky panels. If changing a shared component, cover one representative instance per role and any exceptional variant. Compare the same dimensions across states. Check for clipping and unintended page scrolling. Use targeted automated tests for state changes, with visual verification for geometry. Do not repeat unchanged checks after they pass unless new evidence warrants it.
 
 ## Check supporting screens and copy
 

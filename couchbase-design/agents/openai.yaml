@@ -1,4 +1,6 @@
 interface:
   display_name: "Couchbase Design"
-  short_description: "Couchbase branding and demo UI design preferences"
-  default_prompt: "Use $couchbase-design to design or refine this Couchbase interface using the approved branding, layout, motion, and responsive patterns."
+  short_description: "Approved Couchbase demo styling and setup defaults"
+  default_prompt: "Use $couchbase-design to apply our approved compact demo setup and pair UI pattern repair for existing interface fixes."
+policy:
+  allow_implicit_invocation: true

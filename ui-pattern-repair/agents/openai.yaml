@@ -1,0 +1,6 @@
+interface:
+  display_name: "UI Pattern Repair"
+  short_description: "Consistent UI repairs across components and live states"
+  default_prompt: "Use $ui-pattern-repair to fix this example across matching components, preserve our approved design, and verify responsive and live states."
+policy:
+  allow_implicit_invocation: true

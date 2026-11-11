@@ -20,3 +20,19 @@
  --cb-ink:#f5f5f5; --cb-muted:#c5c5c5; --cb-line:#444; --cb-control-line:#777;
  --cb-edit-ink:#ffaaa4; --cb-accent:#789aaa;color-scheme:dark;
 }
+
+/* Compact demo opt-in: preserve product-specific geometry when refining existing UI. */
+.couchbase-ui[data-density="demo"] {
+ --cb-h1:32px; --cb-h2:22px; --cb-h3:20px;
+ --cb-reading:15px; --cb-label:14px; --cb-meta:13px;
+ --cb-radius:8px; --cb-card-radius:8px;
+ --cb-context:#f6f2e9; --cb-evidence:#f1f0eb; --cb-section-edge:#bdb6aa;
+ --cb-outcome:#fff0da; --cb-outcome-ink:#624a24;
+}
+.couchbase-ui[data-density="demo"][data-theme="dark"] {
+ --cb-context:#302d28; --cb-evidence:#303030; --cb-section-edge:#66615a;
+ --cb-outcome:#383025; --cb-outcome-ink:#f1dfbe;
+}
+@media(max-width:600px) {
+ .couchbase-ui[data-density="demo"] { --cb-h1:28px; --cb-h2:20px; --cb-h3:18px; }
+}

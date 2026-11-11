@@ -1,6 +1,6 @@
 # Design skills for Codex and Claude
 
-Two reusable instruction sets that help an AI coding agent build clear Couchbase interfaces and improve an existing UI consistently. They carry forward the design decisions and repair methods developed while building John’s AI savings calculator and Harborline hotel concierge demo.
+Two reusable instruction sets that help an AI coding agent build clear Couchbase interfaces and improve an existing UI consistently. They carry forward the design decisions and repair methods developed while building John’s AI savings calculator, Harborline hotel concierge, and Air recovery demo.
 
 **Couchbase Design defines the visual direction. UI Pattern Repair defines how to diagnose, fix, and verify a UI problem across matching components.** Use both for most improvements to an existing Couchbase demo.
 
@@ -14,6 +14,14 @@ These are instructions and supporting assets, not an application, a hosted servi
 | [UI Pattern Repair](ui-pattern-repair/SKILL.md) | Treat one reported defect as an example, find equivalent issues, identify the cause, repair the shared pattern, and verify relevant screen sizes and interaction states. | Dropdowns look inconsistent, text hierarchy is unclear, panels jump during updates, details appear blank, content overlaps, or scrolling behaves incorrectly. |
 
 UI Pattern Repair also works on other brands: use that product’s design system instead of applying Couchbase styling. Couchbase Design is not intended for backend-only database tasks.
+
+## Start with the setup already agreed
+
+[Couchbase demo defaults](couchbase-design/references/demo-defaults.md) is the starting profile: compact Centra/Inter type, cream banner, black/charcoal dark mode, clear section colors, plus/minus disclosures, a sliding theme switch, and stable live panels. Customer conversations use rounded message bubbles; tool evidence uses aligned squared sections.
+
+Both skills support automatic selection in Codex. For existing Couchbase UI work, the design skill routes to UI Pattern Repair. Claude uses the same instructions; discovery depends on its installation and session. If the host does not select them, ask for `couchbase-design` once. Installation does not force every agent or chat to load a skill.
+
+The defaults preserve differences between the calculator, hotel and Air demo. They do not copy one app's navigation into another or claim simulated services are connected. The agent should audit equivalent components without asking you to repeat accepted preferences.
 
 ## Best way to use them
 

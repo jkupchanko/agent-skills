@@ -7,6 +7,10 @@ description: Use when creating, refining, or auditing Couchbase-branded web inte
 
 Design for a quick, legible product demonstration that feels at home on couchbase.com. This is John's reusable design profile, not an official Couchbase brand manual. Use the current user request over these defaults.
 
+## Start from the approved demo setup
+
+For a demo, first read [demo-defaults.md](references/demo-defaults.md). It is the compact starting contract for the calculator, hotel and Air family: typography, surfaces, toolbar, disclosures, conversations and live frames. Apply it without asking John to repeat established preferences. Preserve a newer approved project implementation when it differs; inspect active styles rather than copying every legacy override. For an existing UI repair, pair with UI pattern repair automatically.
+
 ## Start with evidence
 
 - Inspect the existing UI, current styles, assets, and active component states before editing. In a reference calculator, scroll down to the actual app and click its controls; the marketing header is insufficient evidence.
@@ -38,7 +42,7 @@ A useful request is: “Use the Couchbase design and UI pattern repair skills. T
 - Accepted: official logo linked to couchbase.com, matching favicon, Centra No2 headings and Inter body, warm cream banner and savings highlight, black/charcoal dark mode, concise CTA, red actions, uniform dropdowns, compact inputs summaries, desktop workload recap next to selections.
 - Accepted selected checkbox: exact TCO green **#21EA2A**, **46px** square, **4px black border**, **16px radius**, bold rounded black tick. Color alone did not reproduce the reference's appearance.
 - Accepted decorative accent: muted steel blue **#547D91** in light, **#789AAA** in dark. Rejected purple/periwinkle, blue-green tint on the annual-cost box, extra corner motif, and barely perceptible drifting lines.
-- Rejected: excessive prose, tiny low-contrast subtext, oversized message text, tooltips covering content, nested box clutter, numbered decorative step badges, arbitrary top-header slogans, replay controls, and a visible pause-background control. Respect reduced motion and pause background work when the page is hidden. If a requested ongoing effect requires a pause mechanism for accessibility, prefer a finite effect or an accessible motion setting; explain that tradeoff rather than claiming reduced motion alone guarantees compliance.
+- Rejected: excessive prose, tiny low-contrast subtext, oversized message text, tooltips covering content, nested box clutter, numbered decorative step badges, arbitrary top-header slogans, prominent standalone replay controls, and a visible pause-background control. Respect reduced motion and pause background work when the page is hidden. If a requested ongoing effect requires a pause mechanism for accessibility, prefer a finite effect or an accessible motion setting; explain that tradeoff rather than claiming reduced motion alone guarantees compliance.
 - The calculator uses ordered Spend / Workload / Estimate tabs. Keep required steps gated, retain edits, and show actual answers only when enough input exists. Other products should use their own appropriate navigation; do not force this wizard on every app.
 
 ## Combine design disciplines, not entire skill packages
