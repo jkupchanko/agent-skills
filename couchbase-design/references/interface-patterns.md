@@ -4,7 +4,9 @@
 
 Use a shared content width/centerline for header, hero and app; reference content width is about 1260px. Container padding commonly 24–32px, section gaps 24–48px, cards 20–24px. These are starting points, not mandatory dimensions across all products. Restrained 12–16px corners and single borders define sections. No nested white illustration box inside the cream hero.
 
-For the calculator/demo hero, the approved composition pairs concise copy with large custom geometry (coral, ochre, blue-gray and cream). Artwork should occupy its column, not look like a small thumbnail. On phones stack copy/art, keep the composition centered and avoid clipping or horizontal overflow. Preserve geometry when toggling themes.
+For compact demos and calculators, prefer the approved Hotel Concierge banner proportions: a shallow cream surface with concise copy and supporting custom geometry (coral, ochre, blue-gray and cream), so the working interface appears sooner. The savings calculator adopted this treatment on November 10, 2026. Keep artwork recognizable without letting it dictate an oversized hero.
+
+Measured reference for this composition: approximately 189px desktop height, 20px vertical / 28px horizontal padding, 32px heading at 1.15 line-height, and artwork around 148px tall within a 360px-wide column. These are reference measurements, not universal fixed heights. Let longer copy and text zoom grow naturally; never clip to enforce the reference. On phones, stack and center copy/art with 24px padding, a 28px heading and approximately 110px artwork. Keep geometry identical in light/dark mode and check for horizontal overflow. Preserve the existing logo, wording and illustration unless separately requested. Verify the served CSS and invalidate its asset cache when needed; old overrides can silently win despite an edited stylesheet.
 
 ## Guided forms and controls
 

@@ -41,6 +41,12 @@ Choose checks based on the affected behavior:
 
 Compare the same dimensions across states. Check for clipping and unintended page scrolling. Use targeted automated tests for state changes, with visual verification for geometry. Do not repeat unchanged checks after they pass unless new evidence warrants it.
 
+## Check supporting screens and copy
+
+When a user asks for consistency throughout a demo, include secondary navigation and reference pages, not just the primary workflow. Compare equivalent headings, cards, disclosures, status labels and empty states. Check that explanatory copy describes the current scenario and distinguishes simulated fixtures from live services; visual consistency cannot repair contradictory claims.
+
+If sectioning increases card height, reduce repeated metadata, label stacking and surplus padding before shrinking reading text. Keep full user messages and outcomes accessible. Use the product profile for preferred treatments, such as aligned tool input/result blocks; do not spread a chat metaphor to unrelated components automatically.
+
 ## Deliver and retain
 
 Report the concrete fixes, representative checks and remaining uncertainty. Distinguish local, committed and deployed status. Publishing requires the user's existing authorization for that destination; this skill grants none. If publishing is authorized, verify the actual shared URL and retain a screenshot of the served result.

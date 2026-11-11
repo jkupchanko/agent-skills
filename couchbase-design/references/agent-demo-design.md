@@ -45,3 +45,17 @@ Match equivalent roles across chat and activity, including nested disclosures. U
 ## Focused validation
 
 Inspect initial empty state, running tool, completed result, open Activity details, deeper explanation and confirmation. Check the affected view in both themes and at a narrow width; include a short desktop viewport for sticky layouts. Verify no clipped output, unexplained bottom gap or duplicate legacy panel. For a pure surface tweak, visual checks suffice; for renderer or state changes, test disclosure preservation, skipped tools and result restoration. Do not claim a live model integration from simulation tests.
+
+## Recovery and evidence cards
+
+For the Air demo, keep tool Input and Result blocks aligned to the same left edge and width. John rejected alternating chat-style offsets for this evidence view. Give each tool call a clear header and separate input/result surfaces; use neutral input, quiet blue-gray result, and restrained amber for an error. Show actual argument names and returned evidence, including failures and retries. This is an observable execution record, not model thought disclosure.
+
+Keep Decision and Draft reply distinct. Use a short rationale and readable full reply; put secondary action lists and model/token metadata behind a disclosure. Shorten authored sample copy, but do not silently truncate live decision constraints or passenger replies. Keep the approval action with the reply. Preferred/recommended options use a quiet cream tint, dark text, a neutral border, and a written recommendation label—not a solid red fill.
+
+Passenger request cards separate flight identity, message, compact assessment, and routing. Prefer inline label/value pairs to tall label-over-value stacks when they remain readable. Avoid a cluster of uppercase tags such as intent, urgency, needs, and “to Claude”; use clear routing language such as “Sent to Recovery.” Card height should follow useful content, with no imposed blank space.
+
+## Demo-wide consistency
+
+Audit secondary navigation as well as the main view: How it works, model information, query/workflow references, Cost, and footer. Reuse card, type, spacing and status roles. Explain the scenario actually shown; do not carry old counts, diagrams, model names, empty query blocks, or “Live” badges into a simulated run. Simulated costs are illustrative, not pricing quotes. Product architecture references must be distinguishable from connected services.
+
+Preserve the main interface when adding simulated data. John rejected a new replay panel and prominent Resume / Next event buttons. Keep optional replay controls in the existing More menu unless explicitly requested otherwise; retain a concise simulation label. Do not infer permission to change real backend behavior from a simulation request.

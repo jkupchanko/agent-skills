@@ -102,3 +102,9 @@ Keep project-specific status, temporary workarounds, credentials, and deployment
 ## Boundaries
 
 Neither skill grants permission to publish, change access, use paid resources, or push to somebody else’s repository. Preserve the user’s authorized scope and destination. Keep credentials and private project data out of skill packages. Couchbase marks remain Couchbase’s property; bundled assets do not establish a new license.
+
+## Keeping the two agents consistent
+
+Use this repository as the shared source for these two skills. When an approved design preference changes, update the relevant skill here, validate its references, and sync the same files to both Codex and Claude Code installations. Commit and push only when authorized. Pull updates before installing on another machine; installation copies do not update automatically.
+
+For each UI update, apply both skills, check equivalent screens and responsive states, and report local, GitHub, and hosted status separately. A successful deployment does not mean a GitHub push succeeded. These skills guide decisions; they do not enforce every future change automatically.

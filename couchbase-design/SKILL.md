@@ -22,7 +22,7 @@ Design for a quick, legible product demonstration that feels at home on couchbas
 4. **Theme consistency:** light and dark share geometry. Dark is a black canvas with charcoal cards and lighter controls; the beige hero stays beige. No white card islands or blanket red panel outlines in dark mode.
 5. **Character:** custom artwork may share the brand's geometric language without copying a whole page. Accent motion must be actually visible, smooth, behind content, and absent for reduced motion. No standalone decorative object in the lower-right gap.
 
-For conversational agent demos and activity inspectors, read [agent-demo-design.md](references/agent-demo-design.md). It records the approved compact layout, surface hierarchy and observable decision presentation.
+For conversational agent demos, recovery/tool evidence, simulation reference pages, and activity inspectors, read [agent-demo-design.md](references/agent-demo-design.md). It records the approved compact layout, surface hierarchy and observable decision presentation.
 
 ## Consistent updates with UI pattern repair
 
@@ -34,6 +34,7 @@ A useful request is: “Use the Couchbase design and UI pattern repair skills. T
 
 ## Latest preference wins
 
+- Accepted compact demo banner: Hotel Concierge proportions, transferred to the savings calculator; see interface-patterns.md for responsive reference measurements. Keep the app close below the banner rather than using a tall marketing hero.
 - Accepted: official logo linked to couchbase.com, matching favicon, Centra No2 headings and Inter body, warm cream banner and savings highlight, black/charcoal dark mode, concise CTA, red actions, uniform dropdowns, compact inputs summaries, desktop workload recap next to selections.
 - Accepted selected checkbox: exact TCO green **#21EA2A**, **46px** square, **4px black border**, **16px radius**, bold rounded black tick. Color alone did not reproduce the reference's appearance.
 - Accepted decorative accent: muted steel blue **#547D91** in light, **#789AAA** in dark. Rejected purple/periwinkle, blue-green tint on the annual-cost box, extra corner motif, and barely perceptible drifting lines.
