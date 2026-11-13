@@ -46,3 +46,13 @@ Use transform-based animation, clipped noninteractive decorative layers, stable 
 Methodology is left-aligned with balanced inner spacing, matching card colors and legible disclosure headers. Highlight the active question in the theme's readable red, animate expansion smoothly, and avoid clipped text or tooltip overlays. Do not center entire paragraphs simply because spacing is wrong.
 
 Standalone footer: concise Explore / Learn / Connect groups, official social icons and actual verified destinations. Existing calculator uses X, LinkedIn, YouTube, Facebook, GitHub, Stack Overflow and Discord. Do not invent accounts or copy social URLs blindly to an unrelated organization. When integrating into couchbase.com, use the host header/footer instead of duplicating them.
+
+## Feedback notifications
+
+For the feedback workspace, keep a compact bell in the approved top toolbar. Its unread badge uses Couchbase red with white centered numerals, a circular shape for short counts and enough horizontal padding for `99+`. Hide it at zero; cap only the visible label, not the underlying unread total. Give the bell an accessible name with the actual unread count. Preserve the existing toolbar order and theme switch unless the user requests a change.
+
+Keep the badge legible in light and dark mode with a border matching the surrounding surface. It must not clip at the viewport edge, collide with neighboring controls, or shrink the bell's touch target. Check 1, 99, and 105 unread at phone and iPad widths; 105 displays `99+`. Avoid fixed-width circles that squeeze three characters.
+
+Clicking an update opens the relevant channel or DM and highlights the specific reply when available. Reading that conversation clears its unread state, while activity elsewhere and later arrivals remain unread. Closing a discussion must also refresh stale “New” labels. Mark all as read changes read state; dismissing an item is a separate action and does not delete its message.
+
+Use the paired UI pattern repair skill's notification checks for polling, navigation, and read-state regressions. Test with disposable local accounts and records, preserving live messages and accounts.

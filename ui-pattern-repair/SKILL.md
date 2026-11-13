@@ -61,6 +61,18 @@ Choose checks based on the affected behavior:
 
 For the demo family, use representative phone, iPad and desktop widths from the paired profile; include short desktop height for sticky panels. If changing a shared component, cover one representative instance per role and any exceptional variant. Compare the same dimensions across states. Check for clipping and unintended page scrolling. Use targeted automated tests for state changes, with visual verification for geometry. Do not repeat unchanged checks after they pass unless new evidence warrants it.
 
+## Notification and read-state repairs
+
+For a feedback workspace, audit the full chain: new reply, DM or mention → recipient unread count → exact message navigation → read state → refreshed badge and conversation labels. Keep channel and DM permissions enforced; never leak inaccessible messages or notify the sender of their own action.
+
+- Track read state per recipient. Mark only the opened conversation through the observed event/time boundary; an older read must not consume a later arrival. Opening the notification list alone does not read every message.
+- Preserve the distinction between read, dismissed and deleted. Closing a notification or reading it must not remove the conversation. Refresh stale “New” labels after closing its detail dialog.
+- Poll while visible, prevent overlapping requests, retry after temporary failures, and refresh on focus/resume. The current Feedback app uses a two-second visible poll; preserve that behavior there without imposing it on unrelated products.
+- Keep notification polling active while a discussion is open, without replacing drafts, stealing focus, jumping scroll position, or rerendering unchanged content. Compare meaningful event/count fields rather than a changing server timestamp.
+- Reuse the paired Couchbase design profile's badge styling. Verify zero hidden, 1, 99, and 105 displayed as `99+`; retain the real total in accessible text.
+
+Use two disposable identities in isolated storage. Test replies, DMs and mentions, navigation to the exact reply, reading and reopening, a newer event after a read, and background/resume. At phone and iPad widths, inspect both themes for clipping, overlapping controls and layout shifts. A unit test of count formatting does not replace a browser check of actual read clearing. Do not seed, reset, revoke, or modify live messages/accounts to obtain test evidence. Verify the deployed assets match the tested source before claiming a production fix.
+
 ## Check supporting screens and copy
 
 When a user asks for consistency throughout a demo, include secondary navigation and reference pages, not just the primary workflow. Compare equivalent headings, cards, disclosures, status labels and empty states. Check that explanatory copy describes the current scenario and distinguishes simulated fixtures from live services; visual consistency cannot repair contradictory claims.
