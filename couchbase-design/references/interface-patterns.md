@@ -56,3 +56,11 @@ Keep the badge legible in light and dark mode with a border matching the surroun
 Clicking an update opens the relevant channel or DM and highlights the specific reply when available. Reading that conversation clears its unread state, while activity elsewhere and later arrivals remain unread. Closing a discussion must also refresh stale “New” labels. Mark all as read changes read state; dismissing an item is a separate action and does not delete its message.
 
 Use the paired UI pattern repair skill's notification checks for polling, navigation, and read-state regressions. Test with disposable local accounts and records, preserving live messages and accounts.
+
+## Feedback invitations and navigation contrast
+
+Keep the admin dashboard's **Invite people** shortcut opening Invitations directly. Pending emails are clickable. Within the same page session, reopening reuses the link; after refresh, explicitly offer a replacement that preserves recipient and role and invalidates the old link. Do not rotate links just by opening the list. Never claim email was sent when it was only copied or downloaded.
+
+Make the primary sharing action one portable PDF with embedded artwork and a real join-link annotation. Both the artwork's apparent button and the explicit Join button must open the same valid invitation. Use the stored expiry and role; never show User artwork for an Admin invitation. Phone file sharing uses the native share sheet when supported, with a Save/Download invitation fallback. Keep copy/link/image alternatives under **Other ways to share**, with comfortable touch targets and wrapping controls. A standalone PNG cannot contain a clickable link, and HTML clipboard formatting is not reliable across mail apps.
+
+For the feedback app, distinguish the navigation rail using a neutral gray surface and visible divider against the conversation surface. Dark mode uses a darker neutral rail and a lighter selected row. Emphasize section headings and the active channel, keeping ordinary rows regular weight. Preserve Couchbase red for compact selection/action emphasis; do not turn every outline red. Keep the collapse control's backdrop opaque and matched to the rail while scrolling, and preserve the approved responsive frame.

@@ -73,6 +73,14 @@ For a feedback workspace, audit the full chain: new reply, DM or mention → rec
 
 Use two disposable identities in isolated storage. Test replies, DMs and mentions, navigation to the exact reply, reading and reopening, a newer event after a read, and background/resume. At phone and iPad widths, inspect both themes for clipping, overlapping controls and layout shifts. A unit test of count formatting does not replace a browser check of actual read clearing. Do not seed, reset, revoke, or modify live messages/accounts to obtain test evidence. Verify the deployed assets match the tested source before claiming a production fix.
 
+## Invitation sharing and recipient checks
+
+Audit the sender and recipient as separate states: dashboard shortcut, pending invitation, close/reopen, refresh/replacement, file generation, phone share/download, PDF rendering, join-link navigation, and enrollment. Preserve recipient, assigned role, expiry and revocation; display the same facts in the preview and PDF. Generating or reopening a PDF must not mutate account or invitation records. Replacement requires an explicit action, never a side effect of viewing.
+
+Use disposable local identities and storage. Verify the downloaded PDF has an embedded image and working link annotations, including any button pictured in the artwork. Check the recipient form at phone size and test server-side enrollment as User, including rejection of client-supplied Admin escalation. Distinguish responsive browser testing, cryptographic passkey tests, and physical-device biometric enrollment; do not claim the last one from the first two. Never use real invitations, messages, accounts or email drafts as test fixtures. Native share support and mail formatting vary: provide a single-file download fallback and keep secondary controls collapsed.
+
+For navigation contrast repairs, inspect rail, selected row, section heading, divider, collapse control and conversation as distinct roles in both themes. Preserve layout geometry, scrolling and drafts. Use weight and surface contrast to show hierarchy rather than bolding all text or increasing every font size.
+
 ## Check supporting screens and copy
 
 When a user asks for consistency throughout a demo, include secondary navigation and reference pages, not just the primary workflow. Compare equivalent headings, cards, disclosures, status labels and empty states. Check that explanatory copy describes the current scenario and distinguishes simulated fixtures from live services; visual consistency cannot repair contradictory claims.
